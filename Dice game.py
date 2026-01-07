@@ -23,6 +23,7 @@ player_scores = [0 for _ in range(players)]
 while max(player_scores) < total_score:
     for player in range(players):
         print(f"\nIt is player {player + 1}'s turn")
+        print(f'The total score till now is {player_scores[player]} ')
         current_score = 0
 
         while True:
@@ -38,10 +39,10 @@ while max(player_scores) < total_score:
                 break
             else:
                 current_score += value
-                print (f'Your score is {current_score}')
+                print (f'Your score is {player_scores[player] + current_score}')
 
         player_scores[player] += current_score
-        print (f'The total score is {player_scores[player]}')
+        print (f'The total score for {player +1} is {player_scores[player]}')
 
         if player_scores[player] >= total_score:
             print (f'The player {player +1} has won')
@@ -49,6 +50,8 @@ while max(player_scores) < total_score:
 
 print ("Final_score:", player_scores)
     
+    
+
 
 
 
